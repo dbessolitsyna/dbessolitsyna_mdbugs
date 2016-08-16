@@ -34,7 +34,11 @@ type typeConverter struct{}
 func (me typeConverter) ToDb(val interface{}) (interface{}, error) {
 	switch t := val.(type) {
 	case *semver.Version:
-		return t.String(), nil
+		if t!=nil {
+			return t.String(), nil
+		} else {
+			return nil,nil
+		}
 	}
 
 	return val, nil
