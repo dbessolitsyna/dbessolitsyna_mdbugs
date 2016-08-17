@@ -11,3 +11,5 @@ GET     /favicon.ico                            Static.Serve("public/img","favic
 
 # Catch all
 *       /:controller/:action                  :controller.:action
+
+module:testrunner
